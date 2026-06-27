@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+dist/
+
+# Backend (FastAPI)
+kaara_backend/venv/
+kaara_backend/__pycache__/
+kaara_backend/.pytest_cache/
+kaara_backend/uploads/
+
+# Python
+*.pyc
+__pycache__/
+
+# Environment files
+.env
+kaara_backend/.env
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Logs
+*.log

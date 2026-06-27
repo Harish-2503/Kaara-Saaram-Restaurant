@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-charcoal-deep text-cream font-body;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-gold text-charcoal-deep;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-charcoal-deep;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-dark rounded-full;
+  }
+}
+
+@layer components {
+  .gold-divider {
+    @apply w-16 h-px bg-gold-gradient mx-auto my-4;
+  }
+
+  .section-eyebrow {
+    @apply font-accent text-gold tracking-[0.25em] text-sm uppercase;
+  }
+
+  .section-title {
+    @apply font-display text-cream text-4xl md:text-5xl leading-tight;
+  }
+
+  .prose-cream {
+    @apply text-cream-text leading-relaxed font-body font-light;
+  }
+
+  .tamil-text {
+    @apply font-tamil;
+  }
+
+  .nav-link {
+    @apply relative font-body text-sm tracking-widest uppercase text-cream-text
+           hover:text-gold transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-gold;
+  }
+
+  .nav-link.active::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 40px rgba(201, 150, 42, 0.4);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .border-gold-subtle {
+    border-color: rgba(201, 150, 42, 0.25);
+  }
+
+  .bg-glass {
+    background: rgba(20, 0, 8, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .bg-glass-light {
+    background: rgba(250, 246, 239, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
